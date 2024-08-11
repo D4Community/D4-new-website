@@ -9,24 +9,33 @@ export default function Navbar() {
                 <div className="flex gap-10 items-center">
                     <div>
                         <Image
-                            className="w-[105px] relative"
+                            className="w-[80px] sm:w-[100px]"
                             src={d4logo}
                             alt="d4 logo"
                         />
                     </div>
-                    <nav className='items-center gap-10 hidden lg:flex font-light'>
-                        <a className='text-white text-opacity-90 hover:text-[#EC5735] transition' href='#'>Home</a>
-                        <a className='text-white text-opacity-90 hover:text-[#EC5735] transition' href='#'>Learn</a>
-                        <a className='text-white text-opacity-90 hover:text-[#EC5735] transition' href='#'>Members</a>
-                        <a className='text-white text-opacity-90 hover:text-[#EC5735] transition' href='#'>About</a>
-                        <a className='text-white text-opacity-90 hover:text-[#EC5735] transition' href='#'>Events</a>
-                        <a className='text-white text-opacity-90 hover:text-[#EC5735] transition' href='#'>More</a>
+                    <nav className='items-center gap-10 hidden lg:flex font-light text-[18px]'>
+                        <a className='text-white hover:text-[#EC5735] transition' href='#'>Home</a>
+                        <a className='text-white hover:text-[#EC5735] transition' href='#'>Learn</a>
+                        <a className='text-white hover:text-[#EC5735] transition' href='#'>Members</a>
+                        <a className='text-white hover:text-[#EC5735] transition' href='#'>About</a>
+                        <a className='text-white hover:text-[#EC5735] transition' href='#'>Events</a>
+                        <a className='text-white hover:text-[#EC5735] transition' href='#'>More</a>
                     </nav>
                 </div>
 
-                <div>
-                    <button className="bg-[#EC5735] hover:bg-[#fc7f66] transition text-white px-8 p-2 rounded-lg text-sm">Join now</button>
+
+                <div className="flex gap-3">
+                    <div>
+                        <button className="bg-[#EC5735] hover:bg-[#fc7f66] transition text-white px-6 py-1 rounded-lg text-sm col-span-1">Join now</button>
+                    </div>
+
+                    <MenuIcon
+                        className="text-white border-[1px] rounded-md border-slate-50 border-opacity-50 px-1 sm:hidden"
+                        width={"36"}
+                    />
                 </div>
+
             </div>
         </div>
     )

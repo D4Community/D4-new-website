@@ -9,7 +9,7 @@ export default function Navbar() {
                 <div className="flex gap-10 items-center">
                     <div>
                         <Image
-                            className="w-[80px] sm:w-[100px]"
+                            className="w-[78px] sm:w-[85px]"
                             src={d4logo}
                             alt="d4 logo"
                         />
@@ -27,12 +27,12 @@ export default function Navbar() {
 
                 <div className="flex gap-3">
                     <div>
-                        <button className="bg-[#EC5735] hover:bg-[#fc7f66] transition text-white px-6 py-1 rounded-lg text-sm col-span-1">Join now</button>
+                        <button className="bg-[#EC5735] hover:bg-[#fc7f66] transition text-white px-6 py-1 rounded-lg sm:text-sm col-span-1 text-[13px]">Join now</button>
                     </div>
 
                     <MenuIcon
-                        className="text-white border-[1px] rounded-md border-slate-50 border-opacity-50 px-1 sm:hidden"
-                        width={"36"}
+                        className="text-white rounded-md px-1 lg:hidden"
+                        width={"34"}
                     />
                 </div>
 

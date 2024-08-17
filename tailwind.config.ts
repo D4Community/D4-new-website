@@ -10,7 +10,7 @@ const config: Config = {
     extend: {
       container: {
         padding: '1rem', // 16px
-        // center: true
+        center: true
       },
     },
   },

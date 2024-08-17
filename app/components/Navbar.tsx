@@ -4,7 +4,7 @@ import MenuIcon from "../assets/icons/menubar.svg"
 
 export default function Navbar() {
     return (
-        <div className="bg-[#0E0C15]">
+        <div className="bg-[#0E0C15] shadow-sm shadow-white top-0 sticky z-20">
             <div className="px-5 lg:px-[82px] py-2 flex items-center justify-between gap-2">
                 <div className="flex gap-10 items-center">
                     <div>
@@ -27,7 +27,7 @@ export default function Navbar() {
 
                 <div className="flex gap-3">
                     <div>
-                        <button className="bg-[#EC5735] hover:bg-[#fc7f66] transition text-white px-6 py-1 rounded-lg sm:text-sm col-span-1 text-[13px]">Join now</button>
+                        <button className="bg-[#EC5735] hover:bg-[#fc7f66] transition text-white px-6 py-1 rounded-lg sm:text-sm text-[13px]">Join now</button>
                     </div>
 
                     <MenuIcon

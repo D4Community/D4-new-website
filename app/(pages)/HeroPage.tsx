@@ -11,21 +11,32 @@ import card3 from "../assets/images/heroCard3.png"
 import bracketIcon from "../assets/icons/bracketIcon.png"
 import chatIcon from "../assets/icons/chatIcon.png"
 import terminalIcon from "../assets/icons/terminalIcon.png"
+import mentoringImg from "../assets/images/mentoringImg.png"
+import mentoring1 from "../assets/icons/mentoring1.png"
+import mentoring2 from "../assets/icons/mentoring2.png"
+import mentoring3 from "../assets/icons/mentoring3.png"
+
 import Card from "../components/Card";
+import { BigHeading, Heading } from "../components/Headings";
+import Footer from "../components/Footer";
 
 export default function HeroPage() {
     return (
-        <div className="relative overflow-hidden">
+        <div className="relative overflow-hidden text-white">
             <div className="container">
                 <HeroSection />
                 <InfoSection />
+                <MentorSection />
+                <FooterCall />
             </div>
+            <Footer />
             <Background />
         </div>
     )
 }
 
-function Background () {
+function Background() {
+    // add hexbg image in hero secton
     // have to make the element dynamic (dynamic inputing css is breaking the app so going with hard coded for now will refactor later)
     return (
         <div>
@@ -35,12 +46,10 @@ function Background () {
     )
 }
 
-// add hex images in hero section
-
 function HeroSection() {
     return (
         <div>
-            <div className="text-white md:pt-36 pt-28">
+            <div className="md:pt-36 pt-28">
                 <div className="flex items-center justify-center gap-6 z-10 relative">
                     <div className="flex flex-col lg:text-left lg:items-start text-center items-center md:gap-10 gap-10">
                         <h1 className="sm:text-[55px] text-[48px] font-bold sm:leading-[60px] leading-[50px] bg-[linear-gradient(to_left,#A46FF2,#E49976)] text-transparent bg-clip-text [-webkit-background-clip:text]">Improve your programming skills significantly.</h1>
@@ -79,10 +88,9 @@ function HeroSection() {
 function InfoSection() {
     return (
         <div className="">
-            <div className="text-slate-200 z-10 relative sm:pt-32 pt-24">
+            <div className="z-10 relative sm:pt-32 pt-24">
                 <div className="max-w-[920px]">
-                    <h1 className="text-[38px] font-bold leading-[48px]">There are over 6404 programming exercises. From "Allergies" to "Zebra Puzzle"</h1>
-                    <div className="h-[4px] max-w-[320px] rounded-md ml-1 bg-[linear-gradient(to_left,#A46FF2,#E49976)]"></div>
+                    <BigHeading title={`There are over 6404 programming exercises. From "Allergies" to "Zebra Puzzle"`} />
                 </div>
                 <div className="mt-10 flex items-center gap-12">
                     <div className="flex flex-col gap-8">
@@ -120,6 +128,59 @@ function InfoCard({ src, title, description }: any) {
                 <div className="">
                     <h3 className="text-[25px] font-semibold">{title}</h3>
                     <p className="text-[18px] font-light">{description}</p>
+                </div>
+            </div>
+        </div>
+    )
+}
+
+
+function MentorSection() {
+    return (
+        <div>
+            <div className="container z-10 relative sm:pt-32">
+                <div className="flex items-center justify-center gap-24">
+                    <Image className="w-[520px]" src={mentoringImg} alt="img" />
+                    <div className="flex flex-col gap-10">
+                        <div>
+                            <BigHeading title={"Deepen your knowledge with human mentoring, for free."} />
+                        </div>
+                        <p className="text-[26px]">Discover new and exciting ways to approach an exercise by getting mentored on it. Become more familiar with the conventions, idioms and opinions of a particular programming language.</p>
+                    </div>
+                </div>
+                <div className="pt-20">
+                    <div>
+                        <Heading title={"Why mentoring?"} />
+                    </div>
+                    <div className="flex gap-7 pt-8">
+                        <Card src={mentoring1} title={"You don't know what you don't know"} description={"The most difficult aspect of learning a new language is failing to recognise your own knowledge deficiencies. Our mentors can look at your code and quickly identify concepts you're unfamiliar with, allowing you to advance by gaining new information."} />
+                        <Card src={mentoring2} title={"Learn language-specific conventions"} description={"Being fluent in a language is more than just being able to write code in it; it also means being able to think in that language. Our mentors will help you change your thinking so that you can produce idiomatic code."} />
+                        <Card src={mentoring3} title={"Learning with others is fun"} description={"Receiving input from real people is a really interesting method to learn. Becoming a mentor and providing feedback yourself is an even greater step forward. So complete the circle—be mentored and mentor "} />
+                    </div>
+                </div>
+            </div>
+        </div>
+    )
+}
+
+function FooterCall() {
+    return (
+        <div>
+            <div className="py-24 container z-10 relative">
+                <div className="flex items-center gap-28">
+                    <div className="flex flex-col gap-3">
+                        <div>
+                            <Image className="w-[120px]" src={d4logo} alt="d4 logo" />
+                        </div>
+                        <div className="flex flex-col gap-2">
+                            <h3 className="font-bold text-[28px]">Code practice and mentorship for everyone</h3>
+                            <p className="font-light">Develop fluency in 70 programming languages with our unique blend of learning, practice and mentoring. Exercism is fun, effective and 100% free, forever.</p>
+                        </div>
+                    </div>
+                    <div className="flex gap-8">
+                        <OrangeButton label={"Join"} />
+                        <OrangeButton label={"Explore"} />
+                    </div>
                 </div>
             </div>
         </div>

@@ -8,11 +8,28 @@ import card1 from "../assets/images/heroCard1.png"
 import card2 from "../assets/images/heroCard2.png"
 import card3 from "../assets/images/heroCard3.png"
 
+import bracketIcon from "../assets/icons/bracketIcon.png"
+import chatIcon from "../assets/icons/chatIcon.png"
+import terminalIcon from "../assets/icons/terminalIcon.png"
+import Card from "../components/Card";
+
 export default function HeroPage() {
     return (
-        <div className="container">
-            <HeroSection />
-            <InfoSection />
+        <div className="relative overflow-hidden">
+            <div className="container">
+                <HeroSection />
+                <InfoSection />
+            </div>
+            <Background />
+        </div>
+    )
+}
+
+function Background () {
+    return (
+        <div>
+            <BlurLeft top={380} />
+            <BlurRight top={1380} />
         </div>
     )
 }
@@ -53,41 +70,44 @@ function HeroSection() {
                     </div>
                 </div>
             </div>
-            <BlurLeft />
         </div>
     )
 }
 
 function InfoSection() {
     return (
-        <div className="text-slate-200 z-10 relative sm:pt-32 pt-24">
-            <div className="max-w-[920px]">
-                <h1 className="text-[38px] font-bold leading-[48px]">There are over 6404 programming exercises. From "Allergies" to "Zebra Puzzle"</h1>
-                <div className="h-[4px] max-w-[320px] rounded-md ml-1 bg-[linear-gradient(to_left,#A46FF2,#E49976)]"></div>
-            </div>
-            <div className="mt-10 flex items-center gap-12">
-                <div className="flex flex-col gap-8">
-                    <p className="text-[22px]">Learn by doing. Improve your programming skills by doing interesting coding tasks that help you comprehend the basics.</p>
-                    <div className="flex flex-col gap-6">
-                        <InfoCard title={"Dog Puzzle"} description={"Which inhabitants drink water? Who owns the dog? Could you solve the Dog."} src={card1} />
-                        <InfoCard title={"Dog Puzzle"} description={"Which inhabitants drink water? Who owns the dog? Could you solve the Dog."} src={card2} />
-                        <InfoCard title={"Dog Puzzle"} description={"Which inhabitants drink water? Who owns the dog? Could you solve the Dog."} src={card3} />
+        <div className="">
+            <div className="text-slate-200 z-10 relative sm:pt-32 pt-24">
+                <div className="max-w-[920px]">
+                    <h1 className="text-[38px] font-bold leading-[48px]">There are over 6404 programming exercises. From "Allergies" to "Zebra Puzzle"</h1>
+                    <div className="h-[4px] max-w-[320px] rounded-md ml-1 bg-[linear-gradient(to_left,#A46FF2,#E49976)]"></div>
+                </div>
+                <div className="mt-10 flex items-center gap-12">
+                    <div className="flex flex-col gap-8">
+                        <p className="text-[22px]">Learn by doing. Improve your programming skills by doing interesting coding tasks that help you comprehend the basics.</p>
+                        <div className="flex flex-col gap-6">
+                            <InfoCard title={"Dog Puzzle"} description={"Which inhabitants drink water? Who owns the dog? Could you solve the Dog."} src={card1} />
+                            <InfoCard title={"Dog Puzzle"} description={"Which inhabitants drink water? Who owns the dog? Could you solve the Dog."} src={card2} />
+                            <InfoCard title={"Dog Puzzle"} description={"Which inhabitants drink water? Who owns the dog? Could you solve the Dog."} src={card3} />
+                        </div>
+                    </div>
+                    <div className="bg-blue-400">
+                        imgs
                     </div>
                 </div>
-                <div className="bg-blue-400">
-                    imgs
-                </div>
-            </div>
 
-            <div>
-                info sections
+                <div className="mt-10 flex gap-4">
+                    <Card src={bracketIcon} title={"Write code locally, in your own space"} description={"Exercism is primarily built as a CLI-first tool. Download and submit exercises right from your terminal."} />
+                    <Card src={terminalIcon} title={"Use the Exercism in-browser editor"} description={"Exercism is primarily built as a CLI-first tool. Download and submit exercises right from your terminal."} />
+                    <Card src={chatIcon} title={"Get automated analysis on your code"} description={"Exercism is primarily built as a CLI-first tool. Download and submit exercises right from your terminal."} />
+                </div>
             </div>
         </div>
     )
 }
 
 
-function InfoCard({src, title, description}:any) {
+function InfoCard({ src, title, description }: any) {
     return (
         <div className="bg-[#091B32] rounded-lg shadow-sm max-w-[820px]">
             <div className="p-5 flex items-center gap-6">

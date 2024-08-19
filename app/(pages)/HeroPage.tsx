@@ -26,10 +26,11 @@ export default function HeroPage() {
 }
 
 function Background () {
+    // have to make the element dynamic (dynamic inputing css is breaking the app so going with hard coded for now will refactor later)
     return (
         <div>
-            <BlurLeft top={380} />
-            <BlurRight top={1380} />
+            <BlurLeft />
+            <BlurRight />
         </div>
     )
 }
@@ -70,6 +71,7 @@ function HeroSection() {
                     </div>
                 </div>
             </div>
+            {/* <BlurLeft top={380} /> */}
         </div>
     )
 }
@@ -102,6 +104,7 @@ function InfoSection() {
                     <Card src={chatIcon} title={"Get automated analysis on your code"} description={"Exercism is primarily built as a CLI-first tool. Download and submit exercises right from your terminal."} />
                 </div>
             </div>
+            {/* <BlurRight top={2350} /> */}
         </div>
     )
 }

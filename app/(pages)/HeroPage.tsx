@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { BlurLeft, BlurRight } from "../components/BlurElement";
+import Background from "../components/Background";
 import HeroImage from "../assets/images/heroimg.png"
 import { BlueButton, OrangeButton } from "../components/Buttons";
 
@@ -31,17 +31,6 @@ export default function HeroPage() {
             </div>
             <Footer />
             <Background />
-        </div>
-    )
-}
-
-function Background() {
-    // add hexbg image in hero secton
-    // have to make the element dynamic (dynamic inputing css is breaking the app so going with hard coded for now will refactor later)
-    return (
-        <div>
-            <BlurLeft />
-            <BlurRight />
         </div>
     )
 }

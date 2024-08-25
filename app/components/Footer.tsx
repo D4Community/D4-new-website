@@ -3,7 +3,7 @@ import d4logo from "../assets/images/d4logo.png"
 
 export default function Footer() {
     return (
-        <div className="bottom-0 text-white">
+        <div className="bottom-0 text-white z-10 relative">
             <footer className="container flex justify-between py-8 px-4">
                 <div className="flex flex-col justify-center items-center px-14">
                     <div>

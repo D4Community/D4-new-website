@@ -6,10 +6,10 @@ export default function Background() {
     return (
         <div>
             <HexBg />
-            <Blur1 />
-            <Blur2 />
-            <Blur3 />
-            <Blur4 />
+            <BlurTopLeft />
+            <BlurMidRight />
+            <BlurMidLeft />
+            <BlurBottomRight />
         </div>
     )
 }
@@ -26,7 +26,7 @@ function HexBg() {
 }
 
 
-function Blur1({ top }: any) {
+function BlurTopLeft({ top }: any) {
     return (
         <div>
             <div className={`text-white max-w-[850px] w-[100%] h-[850px] bg-[#0a2d5a7b] rounded-full absolute blur-[120px] bottom-0 left-[-350px] z-[0] top-[130px]`}>
@@ -35,7 +35,7 @@ function Blur1({ top }: any) {
     )
 }
 
-function Blur2({ top }: any) {
+function BlurMidRight({ top }: any) {
     return (
         <div>
             <div className={`text-white max-w-[850px] w-[100%] h-[850px] bg-[#0a2d5a7b] rounded-full absolute blur-[120px] bottom-0 left-[1450px] z-[0] top-[1380px]`}>
@@ -44,7 +44,7 @@ function Blur2({ top }: any) {
     )
 }
 
-function Blur3({ top }: any) {
+function BlurMidLeft({ top }: any) {
     return (
         <div>
             <div className={`text-white max-w-[850px] w-[100%] h-[850px] bg-[#0a2d5a7b] rounded-full absolute blur-[120px] bottom-0 left-[-350px] z-[0] top-[2680px]`}>
@@ -53,7 +53,7 @@ function Blur3({ top }: any) {
     )
 }
 
-function Blur4({ top }: any) {
+function BlurBottomRight({ top }: any) {
     return (
         <div>
             <div className={`text-white max-w-[850px] w-[100%] h-[850px] bg-[#0a2d5a7b] rounded-full absolute blur-[120px] bottom-0 left-[1450px] z-[0] top-[3980px]`}>

@@ -23,7 +23,7 @@ import Footer from "../components/Footer";
 export default function HeroPage() {
     return (
         <div className="relative overflow-hidden text-white">
-            <div className="container">
+            <div className="container z-10 relative">
                 <HeroSection />
                 <InfoSection />
                 <MentorSection />
@@ -39,7 +39,7 @@ function HeroSection() {
     return (
         <div>
             <div className="md:pt-36 pt-28">
-                <div className="flex items-center justify-center gap-6 z-10 relative">
+                <div className="flex items-center justify-center gap-6">
                     <div className="flex flex-col lg:text-left lg:items-start text-center items-center md:gap-10 gap-10">
                         <h1 className="sm:text-[55px] text-[48px] font-bold sm:leading-[60px] leading-[50px] bg-[linear-gradient(to_left,#A46FF2,#E49976)] text-transparent bg-clip-text [-webkit-background-clip:text]">Improve your programming skills significantly.</h1>
                         <h3 className="sm:text-[24px] text-[16px]">With D4 Communities unique learning, practice, and coaching approach, you can master 70 programming languages. Exercising is enjoyable, beneficial, and completely free forever.</h3>
@@ -77,7 +77,7 @@ function HeroSection() {
 function InfoSection() {
     return (
         <div className="">
-            <div className="z-10 relative sm:pt-32 pt-24">
+            <div className="sm:pt-32 pt-24">
                 <div className="max-w-[920px]">
                     <BigHeading title={`There are over 6404 programming exercises. From "Allergies" to "Zebra Puzzle"`} />
                 </div>
@@ -127,7 +127,7 @@ function InfoCard({ src, title, description }: any) {
 function MentorSection() {
     return (
         <div>
-            <div className="container z-10 relative sm:pt-32">
+            <div className="container sm:pt-32">
                 <div className="flex items-center justify-center gap-24">
                     <Image className="w-[520px]" src={mentoringImg} alt="img" />
                     <div className="flex flex-col gap-10">
@@ -155,7 +155,7 @@ function MentorSection() {
 function FooterCall() {
     return (
         <div>
-            <div className="py-24 container z-10 relative">
+            <div className="py-24 container">
                 <div className="flex items-center gap-28">
                     <div className="flex flex-col gap-3">
                         <div>

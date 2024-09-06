@@ -1,10 +1,11 @@
 import Image from "next/image";
 import d4logo from "../assets/images/d4logo.png"
 import MenuIcon from "../assets/icons/menubar.svg"
+import Link from "next/link";
 
 export default function Navbar() {
     return (
-        <div className="bg-[#0E0C15] shadow-sm shadow-white top-0 sticky z-20">
+        <div className="bg-[#0E0C15]/80 shadow-sm shadow-white/10 top-0 sticky z-20 backdrop-blur-md">
             <div className="px-5 lg:px-[82px] py-2 flex items-center justify-between gap-2">
                 <div className="flex gap-10 items-center">
                     <div>
@@ -15,12 +16,12 @@ export default function Navbar() {
                         />
                     </div>
                     <nav className='items-center gap-10 hidden lg:flex font-light text-[18px]'>
-                        <a className='text-white hover:text-[#EC5735] transition' href='#'>Home</a>
-                        <a className='text-white hover:text-[#EC5735] transition' href='#'>Learn</a>
-                        <a className='text-white hover:text-[#EC5735] transition' href='#'>Members</a>
-                        <a className='text-white hover:text-[#EC5735] transition' href='#'>About</a>
-                        <a className='text-white hover:text-[#EC5735] transition' href='#'>Events</a>
-                        <a className='text-white hover:text-[#EC5735] transition' href='#'>More</a>
+                        <Link className='text-white hover:text-[#EC5735] transition' href='/'>Home</Link>
+                        <Link className='text-white hover:text-[#EC5735] transition' href='/'>Learn</Link>
+                        <Link className='text-white hover:text-[#EC5735] transition' href='/'>Members</Link>
+                        <Link className='text-white hover:text-[#EC5735] transition' href="/about">About</Link>
+                        <Link className='text-white hover:text-[#EC5735] transition' href='/'>Events</Link>
+                        <Link className='text-white hover:text-[#EC5735] transition' href='/'>More</Link>
                     </nav>
                 </div>
 

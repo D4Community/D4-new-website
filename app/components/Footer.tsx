@@ -18,9 +18,28 @@ export default function Footer() {
                         link3={"Cookie Policy"}
                         link4={"Code of Conduct"}
                         link5={"Accessibility Statement"} />
-                    <FooterLinks heading={"Get Involved"} link={"hello"} />
-                    <FooterLinks heading={"About D4"} link={"hello"} />
-                    <FooterLinks heading={"Get Help"} link={"hello"} />
+
+                    <FooterLinks
+                        heading={"Get Involved"}
+                        link1={"D4 Insider"}
+                        link2={"Contribute"}
+                        link3={"Mentor"}
+                        link4={"Donate"} />
+
+                    <FooterLinks
+                        heading={"About D4"}
+                        link1={"About D4 Community"}
+                        link2={"Our Team"}
+                        link3={"Contribute"}
+                        link4={"Partners"}
+                        link5={"Individual Support"} />
+
+                    <FooterLinks
+                        heading={"Get Help"}
+                        link1={"Getting Started"}
+                        link2={"D4's Docs"}
+                        link3={"FAQs"} />
+
                 </div>
             </footer>
             <div className="bg-[#091B32]">
@@ -33,12 +52,12 @@ export default function Footer() {
     )
 }
 
-function FooterLinks({ heading, link1, link2, link3, link4, link5}: any) {
+function FooterLinks({ heading, link1, link2, link3, link4, link5 }: any) {
     return (
         <nav>
             <div>
-                <h2 className="font-bold text-[20px] pb-3">{heading}</h2>
-                <div className="font-light flex flex-col">
+                <h2 className="font-bold text-[20px] pb-4">{heading}</h2>
+                <div className="font-light flex flex-col text-[16px] gap-2">
                     <a>{link1}</a>
                     <a>{link2}</a>
                     <a>{link3}</a>

@@ -18,9 +18,9 @@ export default function Navbar() {
                     <nav className='items-center gap-10 hidden lg:flex font-light text-[18px]'>
                         <Link className='text-white hover:text-[#EC5735] transition' href='/'>Home</Link>
                         <Link className='text-white hover:text-[#EC5735] transition' href='/'>Learn</Link>
-                        <Link className='text-white hover:text-[#EC5735] transition' href='/'>Members</Link>
+                        <Link className='text-white hover:text-[#EC5735] transition' href='/team'>Team</Link>
                         <Link className='text-white hover:text-[#EC5735] transition' href="/about">About</Link>
-                        <Link className='text-white hover:text-[#EC5735] transition' href='/'>Events</Link>
+                        <Link className='text-white hover:text-[#EC5735] transition' href='/events'>Events</Link>
                         <Link className='text-white hover:text-[#EC5735] transition' href='/'>More</Link>
                     </nav>
                 </div>

@@ -17,15 +17,15 @@ export default function LinkPool() {
 function LinkSection() {
     return (
         <div className="flex justify-center items-center">
-            <div className="md:py-40 py-24">
+            <div className="md:py-30 py-24">
                 <div className="flex flex-col justify-center items-center text-center">
                     <Image
-                        className="w-[125px]"
+                        className="md:w-[auto] w-[120px]"
                         src={d4logo}
                         alt="d4logo"
                     />
                     <h1 className="font-normal md:text-[24px] text-[18px]">D4 Community</h1>
-                    <p className="font-light md:text-[18px] text-[16px] pt-2">Open-Source Tech Community made by Students, for the Students</p>
+                    <p className="font-light md:text-[18px] text-[16px] pt-2">An open-Source Tech Community! made by Students for the Students</p>
                 </div>
                 <div className="py-12">
                     <LinkButtons />

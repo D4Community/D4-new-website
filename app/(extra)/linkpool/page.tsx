@@ -25,7 +25,7 @@ function LinkSection() {
                         alt="d4logo"
                     />
                     <h1 className="font-normal md:text-[24px] text-[18px]">D4 Community</h1>
-                    <p className="font-light md:text-[18px] text-[16px] pt-2">An open-Source Tech Community! made by Students for the Students</p>
+                    <p className="font-light md:text-[18px] text-[16px] pt-2">An Open-Source Tech Community made by Students for the Students</p>
                 </div>
                 <div className="py-12">
                     <LinkButtons />
@@ -76,7 +76,7 @@ function LinkButtons() {
             {LinkButtons.map((prop, index) => {
                 return (
                     <div className="flex flex-col items-center" key={index}>
-                        <a href={prop.link} target="_blank" className="bg-[#0E0C15]/80 shadow-sm border-slate-300 border-[1px] py-[16px] text-[15px] min-w-[350px] rounded-sm font-medium text-slate-300 text-center cursor-pointer hover:shadow-lg-[#ec5745] hover:border-[#ec5745] transition flex justify-center items-center gap-3">
+                        <a href={prop.link} target="_blank" className="bg-[#0E0C15]/80 shadow-sm border-slate-300 border-[1px] py-[16px] text-[15px] w-[95%] rounded-sm font-medium text-slate-300 text-center cursor-pointer hover:shadow-lg-[#ec5745] hover:border-[#ec5745] transition flex justify-center items-center gap-3">
                             {/* <Image className="w-[45px]" src={d4logo} alt={prop.label} /> */}
                             {prop.label}
                         </a>

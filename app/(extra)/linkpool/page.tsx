@@ -64,12 +64,11 @@ function LinkButtons() {
         label: "Apply to be a Volunteer",
         icon: "",
         link: "https://forms.gle/CY8eDostKx2t8Wx49"
-    }, // {
-    //     label: "Visit Our Website",
-    //     icon: "",
-    //     link: "https://d4-website-v1.vercel.app/"
-    // }
-    ]
+    }, {
+          label: "Whatsapp Channel",
+          icon: "",
+          link: "https://whatsapp.com/channel/0029Va8QbTU8V0trPdleNl2I"
+     }]
 
     return (
         <div className="flex flex-col gap-6">

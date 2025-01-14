@@ -38,25 +38,25 @@ export default function HeroPage() {
 function HeroSection() {
     return (
         <div>
-            <div className="md:pt-36 pt-28">
+            <div className="md:pt-36 pt-24">
                 <div className="flex items-center justify-center gap-6">
                     <div className="flex flex-col lg:text-left lg:items-start text-center items-center md:gap-10 gap-10">
-                        <h1 className="sm:text-[55px] text-[48px] font-bold sm:leading-[60px] leading-[50px] bg-[linear-gradient(to_left,#A46FF2,#E49976)] text-transparent bg-clip-text [-webkit-background-clip:text]">Improve your programming skills significantly.</h1>
-                        <h3 className="sm:text-[24px] text-[16px]">With D4 Communities unique learning, practice, and coaching approach, you can master 70 programming languages. Exercising is enjoyable, beneficial, and completely free forever.</h3>
+                        <h1 className="sm:text-[55px] text-[41px] font-bold sm:leading-[60px] leading-[50px] bg-[linear-gradient(to_left,#A46FF2,#E49976)] text-transparent bg-clip-text [-webkit-background-clip:text]">Improve your programming skills significantly.</h1>
+                        <h3 className="sm:text-[24px] text-[14px]">With D4 Communities unique learning, practice, and coaching approach, you can master 70 programming languages. Exercising is enjoyable, beneficial, and completely free forever.</h3>
 
                         <div className="flex gap-5">
                             <OrangeButton label={"Join Now"} />
                             <OrangeButton label={"Explore"} />
                         </div>
 
-                        <div className="flex items-center gap-10 pt-8">
+                        <div className="flex items-center sm:gap-10 gap-8 pt-8">
                             <div>
                                 <Image
                                     className="sm:w-[85px] min-w-[78px]"
                                     src={d4logo}
                                     alt={"d4 log0"} />
                             </div>
-                            <p className="max-w-[450px] font-light sm:text-[16px] text-[14px]">is an autonomous, community financed, not-for-profit organisation.</p>
+                            <p className="max-w-[450px] font-light sm:text-[16px] text-[11px]">is an autonomous, community financed, not-for-profit organisation.</p>
                             <BlueButton label={"learn more"} />
                         </div>
                     </div>
@@ -81,21 +81,21 @@ function InfoSection() {
                 <div className="max-w-[920px]">
                     <BigHeading title={`There are over 6404 programming exercises. From "Allergies" to "Zebra Puzzle"`} />
                 </div>
-                <div className="mt-10 flex items-center gap-12">
+                <div className="mt-10 flex lg:flex-row-reverse md:flex-col items-center gap-12">
+                    <div className="bg-blue-400 hidden md:block">
+                        imgs
+                    </div>
                     <div className="flex flex-col gap-8">
-                        <p className="text-[22px]">Learn by doing. Improve your programming skills by doing interesting coding tasks that help you comprehend the basics.</p>
+                        <p className="sm:text-[22px] text-[16px]">Learn by doing. Improve your programming skills by doing interesting coding tasks that help you comprehend the basics.</p>
                         <div className="flex flex-col gap-6">
                             <InfoCard title={"Dog Puzzle"} description={"Which inhabitants drink water? Who owns the dog? Could you solve the Dog."} src={card1} />
                             <InfoCard title={"Dog Puzzle"} description={"Which inhabitants drink water? Who owns the dog? Could you solve the Dog."} src={card2} />
                             <InfoCard title={"Dog Puzzle"} description={"Which inhabitants drink water? Who owns the dog? Could you solve the Dog."} src={card3} />
                         </div>
                     </div>
-                    <div className="bg-blue-400">
-                        imgs
-                    </div>
                 </div>
 
-                <div className="mt-10 flex gap-4">
+                <div className="mt-10 flex sm:flex-row flex-col sm:gap-4 gap-1">
                     <Card src={bracketIcon} title={"Write code locally, in your own space"} description={"Exercism is primarily built as a CLI-first tool. Download and submit exercises right from your terminal."} />
                     <Card src={terminalIcon} title={"Use the Exercism in-browser editor"} description={"Exercism is primarily built as a CLI-first tool. Download and submit exercises right from your terminal."} />
                     <Card src={chatIcon} title={"Get automated analysis on your code"} description={"Exercism is primarily built as a CLI-first tool. Download and submit exercises right from your terminal."} />
@@ -112,11 +112,11 @@ function InfoCard({ src, title, description }: any) {
         <div className="bg-[#091B32] rounded-lg shadow-sm max-w-[820px]">
             <div className="p-5 flex items-center gap-6">
                 <div>
-                    <Image className="w-[110px]" src={src} alt="card 1" />
+                    <Image className="w-[110px] min-w-[40px]" src={src} alt="card 1" />
                 </div>
                 <div className="">
-                    <h3 className="text-[25px] font-semibold">{title}</h3>
-                    <p className="text-[18px] font-light">{description}</p>
+                    <h3 className="sm:text-[25px] text-[20px] font-semibold">{title}</h3>
+                    <p className="sm:text-[18px] text-[15px] font-light">{description}</p>
                 </div>
             </div>
         </div>
@@ -127,21 +127,25 @@ function InfoCard({ src, title, description }: any) {
 function MentorSection() {
     return (
         <div>
-            <div className="container sm:pt-32">
+            <div className="sm:pt-32 pt-28">
                 <div className="flex items-center justify-center gap-24">
-                    <Image className="w-[520px]" src={mentoringImg} alt="img" />
-                    <div className="flex flex-col gap-10">
-                        <div>
-                            <BigHeading title={"Deepen your knowledge with human mentoring, for free."} />
+                    <div className="flex md:flex-row flex-col md:items-center gap-10">
+                        <div className="">
+                            <Image className="lg:max-w-[520px] max-w-[320px]" src={mentoringImg} alt="img" />
                         </div>
-                        <p className="text-[26px]">Discover new and exciting ways to approach an exercise by getting mentored on it. Become more familiar with the conventions, idioms and opinions of a particular programming language.</p>
+                        <div className="flex flex-col gap-5">
+                            <div>
+                                <BigHeading title={"Deepen your knowledge with human mentoring, for free."} />
+                            </div>
+                            <p className="sm:text-[26px] md:text-[20px] text-[16px]">Discover new and exciting ways to approach an exercise by getting mentored on it. Become more familiar with the conventions, idioms and opinions of a particular programming language.</p>
+                        </div>
                     </div>
                 </div>
                 <div className="pt-20">
                     <div>
                         <Heading title={"Why mentoring?"} />
                     </div>
-                    <div className="flex gap-7 pt-8">
+                    <div className="flex md:flex-row flex-col sm:gap-7 gap-4 pt-8">
                         <Card src={mentoring1} title={"You don't know what you don't know"} description={"The most difficult aspect of learning a new language is failing to recognise your own knowledge deficiencies. Our mentors can look at your code and quickly identify concepts you're unfamiliar with, allowing you to advance by gaining new information."} />
                         <Card src={mentoring2} title={"Learn language-specific conventions"} description={"Being fluent in a language is more than just being able to write code in it; it also means being able to think in that language. Our mentors will help you change your thinking so that you can produce idiomatic code."} />
                         <Card src={mentoring3} title={"Learning with others is fun"} description={"Receiving input from real people is a really interesting method to learn. Becoming a mentor and providing feedback yourself is an even greater step forward. So complete the circle—be mentored and mentor "} />
@@ -155,8 +159,8 @@ function MentorSection() {
 function FooterCall() {
     return (
         <div>
-            <div className="py-24 container">
-                <div className="flex items-center gap-28">
+            <div className="py-24">
+                <div className="flex md:flex-row flex-col sm:items-center gap-14">
                     <div className="flex flex-col gap-3">
                         <div>
                             <Image className="w-[120px]" src={d4logo} alt="d4 logo" />

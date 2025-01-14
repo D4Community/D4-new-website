@@ -1,7 +1,7 @@
 export function OrangeButton({ label, onClick }: any) {
     return (
         <button
-            className="bg-[#EC5735] hover:bg-[#fc7f66] transition text-white sm:px-14 px-10 sm:py-2 py-1 rounded-lg sm:text-[18px] text-[14]"
+            className="bg-[#EC5735] hover:bg-[#fc7f66] transition text-white sm:px-14 px-10 sm:py-2 py-1 rounded-lg sm:text-[18px] text-[16px]"
             onClick={onClick}
         >{label}</button>
     )

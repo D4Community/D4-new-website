@@ -5,12 +5,15 @@ export default function Footer() {
     return (
         <div className="bottom-0 text-white z-10 relative">
             <footer className="container flex justify-evenly py-8 px-4">
-                <div className="flex flex-col justify-center">
-                    <div>
-                        <Image className="w-[full]" src={d4logo} alt="d4 logo" />
+                {/*
+                todo:
+                 have to work on footer keeping it hidden in mobile view for now 
+                 take refrence from appwrite website
+                 */}
+                <div className="md:flex gap-32 justify-center hidden">
+                    <div className="flex flex-col">
+                        <Image className="max-w-[160px]" src={d4logo} alt="d4 logo" />
                     </div>
-                </div>
-                <div className="flex gap-32 justify-center">
                     <FooterLinks
                         heading={"Legal & Policies"}
                         link1={"Terms Of Usage"}
@@ -43,7 +46,7 @@ export default function Footer() {
                 </div>
             </footer>
             <div className="bg-[#091B32]">
-                <div className="container text-[18px] font-light py-5 px-4 flex justify-between">
+                <div className="container sm:text-[18px] text-[16px] font-light py-5 px-4 flex justify-between gap-8">
                     <p>D4 Community is a <span>not-for-profit</span> organisation registered In India.</p>
                     <p>Copyright @2023 - {new Date().getFullYear()}</p>
                 </div>

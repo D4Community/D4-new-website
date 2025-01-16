@@ -189,7 +189,7 @@ function FooterLinks({ heading, link1, link2, link3, link4, link5 }: any) {
         <nav>
             <div>
                 {heading ? <h2 className="font-medium text-[20px] pb-4">{heading}</h2> : null}
-                <div className="font-light flex flex-col text-[16px] gap-2">
+                <div className="font-light flex flex-col sm:text-[16px] text-[14px] gap-2">
                     <a>{link1}</a>
                     <a>{link2}</a>
                     <a>{link3}</a>

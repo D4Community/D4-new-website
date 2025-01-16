@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Background from "../components/Background";
 import HeroImage from "../assets/images/heroimg.png"
-import { BlueButton, OrangeButton } from "../components/Buttons";
+import { BlueButton, OrangeButton } from "@/app/components/Buttons";
 
 import d4logo from "../assets/images/d4logo.png"
 import card1 from "../assets/images/heroCard1.png"
@@ -160,7 +160,7 @@ function FooterCall() {
     return (
         <div>
             <div className="py-24">
-                <div className="flex md:flex-row flex-col sm:items-center gap-14">
+                <div className="flex lg:flex-row flex-col sm:items-center gap-14">
                     <div className="flex flex-col gap-3">
                         <div>
                             <Image className="w-[120px]" src={d4logo} alt="d4 logo" />

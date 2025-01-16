@@ -40,7 +40,7 @@ export default function Navbar() {
                         <div className="lg:hidden">
                             <button
                                 onClick={() => setIsBurgerMenuOpen(!isBurgerMenuOpen)}
-                                className="text-gray-800 dark:text-white p-2 hover:text-[#fc7f66] transition-colors"
+                                className="text-white p-2 hover:text-[#fc7f66] transition-colors"
                             >
                                 <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     {isBurgerMenuOpen

@@ -38,7 +38,7 @@ function AboutHeroSection() {
                     title={"Our Pillars"}
                 />
 
-                <div className="flex py-10">
+                <div className="flex md:flex-row flex-col py-10">
                     <Card
                         title={"Descite"}
                         description={"Develop Skills!! This is the first step in your journey. Learn the basics of programming and get a solid foundation."}
@@ -88,12 +88,12 @@ function ReachSection() {
                     <Heading title={"Our Reach"} />
                 </div>
                 <div className="bg-slate-400 w-[1280px] h-[720px] rounded-md shadow-md mx-10"></div>
-                <div className="flex justify-between pt-4">
+                <div className="flex md:flex-row flex-col md:gap-20 gap-10 justify-center pt-4 flex-wrap">
                     {reachInfo.map((prop, i) => {
                         return (
                             <div key={i}>
                                 <h1 className="text-[#BFBFBF] text-[24px]">{prop.title}</h1>
-                                <p className="font-bold text-[38px]">{prop.reach}+</p>
+                                <p className="font-semibold text-[34px]">{prop.reach}+</p>
                             </div>
                         )
                     })}

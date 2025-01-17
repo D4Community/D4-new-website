@@ -38,7 +38,7 @@ export default function HeroPage() {
 function HeroSection() {
     return (
         <div>
-            <div className="md:pt-36 pt-24">
+            <div className="md:pt-44 pt-[190px]">
                 <div className="flex items-center justify-center gap-6">
                     <div className="flex flex-col lg:text-left lg:items-start text-center items-center md:gap-10 gap-10">
                         <h1 className="sm:text-[55px] text-[41px] font-bold sm:leading-[60px] leading-[50px] bg-[linear-gradient(to_left,#A46FF2,#E49976)] text-transparent bg-clip-text [-webkit-background-clip:text]">Improve your programming skills significantly.</h1>

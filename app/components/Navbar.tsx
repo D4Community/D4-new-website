@@ -9,8 +9,28 @@ export default function Navbar() {
 
     const [isBurgerMenuOpen, setIsBurgerMenuOpen] = useState(false)
 
+    const NavLinks = [{
+        url: "/",
+        title: "Home",
+    }, {
+        url: "/",
+        title: "Learn",
+    }, {
+        url: "/team",
+        title: "Team",
+    }, {
+        url: "/about",
+        title: "About",
+    }, {
+        url: "/events",
+        title: "Events",
+    }, {
+        url: "/",
+        title: "More",
+    }]
+
     return (
-        <nav className="bg-[#0E0C15]/80 shadow-sm shadow-white/10 top-0 z-20 sticky backdrop-blur-md">
+        <nav className="bg-[#0E0C15]/80 shadow-sm shadow-white/10 top-0 z-20 fixed w-[100%] backdrop-blur-md">
             <div className="">
                 <div className="px-5 lg:px-[82px] py-2 flex items-center justify-between gap-2">
                     <div className="flex gap-10 items-center">
@@ -22,12 +42,11 @@ export default function Navbar() {
                             />
                         </div>
                         <div className='items-center gap-10 hidden lg:flex font-light text-[18px]'>
-                            <Link className='text-white hover:text-[#EC5735] transition' href='/'>Home</Link>
-                            <Link className='text-white hover:text-[#EC5735] transition' href='/'>Learn</Link>
-                            <Link className='text-white hover:text-[#EC5735] transition' href='/team'>Team</Link>
-                            <Link className='text-white hover:text-[#EC5735] transition' href="/about">About</Link>
-                            <Link className='text-white hover:text-[#EC5735] transition' href='/events'>Events</Link>
-                            <Link className='text-white hover:text-[#EC5735] transition' href='/'>More</Link>
+                            {NavLinks.map((prop, i) => {
+                                return (
+                                    <Link key={i} className='text-white hover:text-[#EC5735] transition' href={prop.url}>{prop.title}</Link>
+                                )
+                            })}
                         </div>
                     </div>
 
@@ -54,13 +73,12 @@ export default function Navbar() {
                 </div>
                 {isBurgerMenuOpen && (
                     <div className="lg:hidden border-t-[1px] border-[#ec5735]">
-                        <div className="px-8 py-8 space-y-1 flex flex-col gap-5 font-light items-end">
-                            <Link className='text-white hover:text-[#EC5735] transition' href='/'>Home</Link>
-                            <Link className='text-white hover:text-[#EC5735] transition' href='/'>Learn</Link>
-                            <Link className='text-white hover:text-[#EC5735] transition' href='/team'>Team</Link>
-                            <Link className='text-white hover:text-[#EC5735] transition' href="/about">About</Link>
-                            <Link className='text-white hover:text-[#EC5735] transition' href='/events'>Events</Link>
-                            <Link className='text-white hover:text-[#EC5735] transition' href='/'>More</Link>
+                        <div className="px-8 py-8 space-y-1 flex flex-col gap-10 font-light justify-center items-center h-screen">
+                            {NavLinks.map((prop, i) => {
+                                return (
+                                    <Link key={i} className='text-white hover:text-[#EC5735] transition' href={prop.url}>{prop.title}</Link>
+                                )
+                            })}
                         </div>
                     </div>
                 )}

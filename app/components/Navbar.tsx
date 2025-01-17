@@ -73,7 +73,7 @@ export default function Navbar() {
                 </div>
                 {isBurgerMenuOpen && (
                     <div className="lg:hidden border-t-[1px] border-[#ec5735]">
-                        <div className="px-8 py-8 space-y-1 flex flex-col gap-10 font-light justify-center items-center h-screen">
+                        <div className="px-8 py-8 space-y-1 flex flex-col gap-6 font-light justify-center items-end">
                             {NavLinks.map((prop, i) => {
                                 return (
                                     <Link onClick={() => {setTimeout(() => setIsBurgerMenuOpen(false),100)}} key={i} className='text-white hover:text-[#EC5735] transition' href={prop.url}>{prop.title}</Link>

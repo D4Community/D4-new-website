@@ -108,13 +108,13 @@ function CoreTeamSection() {
                         })
                     }
                 </div>
-                <div className="lg:hidden flex items-center justify-center">
+                <div className="lg:hidden flex items-center gap-10 justify-center">
                     <Carousel className="w-full max-w-xs">
                         <CarouselContent>
                             {
                                 coreTeam.map((prop, k) => {
                                     return (
-                                        <CarouselItem key={k} >
+                                        <CarouselItem key={k}>
                                             <div key={k} onClick={() => openPopUp(prop)} className="cursor-pointer">
                                                 <CoreTeamCard
                                                     name={prop.name}

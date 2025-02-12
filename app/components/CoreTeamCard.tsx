@@ -5,7 +5,7 @@ import Image from "next/image";
 export default function CoreTeamCard ({name, bio, designation, link, image}: TeamType) {
     return (
         <div>
-            <div className="relative min-h-[420px] min-w-[320px] rounded-3xl bg-gray-400 overflow-hidden ">
+            <div className="relative md:h-[420px] md:w-[320px] min-h-[320px] min-w-[220px] min rounded-3xl bg-gray-400 overflow-hidden ">
             <Image
                 src={image}
                 fill

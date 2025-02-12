@@ -6,7 +6,7 @@ import d4logo from "../assets/images/d4logo.png"
 
 export default function HeroSection({ title, description, description2, description3, img }: any) {
     return (
-        <div className="md:py-44 py-36 flex justify-center items-center gap-20">
+        <div className="md:pt-52 pt-36 py-28 flex justify-center items-center gap-20">
             <div className="flex lg:flex-row flex-col-reverse gap-14">
                 <div>
                     <h1 className="sm:text-[55px] text-[42px] font-semibold sm:leading-[60px] leading-[50px] bg-[linear-gradient(to_left,#E49976,#A46FF2)] text-transparent bg-clip-text [-webkit-background-clip:text]">{title}</h1>

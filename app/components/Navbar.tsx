@@ -13,9 +13,6 @@ export default function Navbar() {
         url: "/",
         title: "Home",
     }, {
-        url: "/",
-        title: "Learn",
-    }, {
         url: "/team",
         title: "Team",
     }, {
@@ -24,9 +21,6 @@ export default function Navbar() {
     }, {
         url: "/events",
         title: "Events",
-    }, {
-        url: "/",
-        title: "More",
     }]
 
     return (

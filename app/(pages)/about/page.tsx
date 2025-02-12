@@ -19,7 +19,6 @@ export default function AboutPAge() {
             <div className="container z-10 relative">
                 <FounderSection />
             </div>
-            <Footer />
             <Background />
         </div>
     )

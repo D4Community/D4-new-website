@@ -7,11 +7,12 @@ export default function PageLayout({ children }: {
     children: React.ReactNode
 }) {
     return (
-        <div className="bg-[#0E0C15]">
+        <div className="bg-[#0E0C15] text-white">
             <Navbar />
             <div className="">
                 {children}
             </div>
+            <Footer />
         </div>
     )
 }

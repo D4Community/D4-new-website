@@ -18,7 +18,7 @@ export default function Background() {
 function HexBg() {
     return (
         <div>
-            <div className="absolute left-[150px] z-0 top-[100px] right-[40px] shrink-0 sm:inline hidden">
+            <div className="absolute left-[150px] z-0 top-[150px] right-[40px] shrink-0 sm:inline hidden">
                 <Image src={hexbg} alt="hex background" />
             </div>
         </div>

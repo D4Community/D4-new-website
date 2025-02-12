@@ -11,7 +11,6 @@ export default function EventPage() {
             <div className="container z-10 relative">
                 <EventHeroSection />
             </div>
-            <Footer />
             <Background />
         </div>
     )

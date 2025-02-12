@@ -5,6 +5,9 @@ import HeroSection from "@/app/components/HeroSection";
 import aboutImg from "@/app/assets/images/abouthero.png"
 import { Heading } from "@/app/components/Headings";
 import Card from "@/app/components/Card";
+import { CardType } from "@/types/cards";
+import FounderCard from "@/app/components/FounderCard";
+import { FounderType } from "@/types/founder";
 
 export default function AboutPAge() {
     return (
@@ -16,13 +19,26 @@ export default function AboutPAge() {
             <div className="container z-10 relative">
                 <FounderSection />
             </div>
-            <Footer />
             <Background />
         </div>
     )
 }
 
 function AboutHeroSection() {
+    const AboutCards: CardType[] = [{
+        title: "Descite",
+        description: "Develop Skills!! This is the first step in your journey. Learn the basics of programming and get a solid foundation."
+    }, {
+        title: "Develop",
+        description: "Build it!! Time to turn your dreams and ideas into reality by writing the code and creating your tech masterpiece."
+    }, {
+        title: "Debug",
+        description: "Fix it!! When things inevitably go haywire, you identify errors, issues and finally hunt down and fix those bugs."
+    }, {
+        title: "Deploy",
+        description: "Share it!! After your creation is polished and perfected, deploy it to the world, making it accessible to users."
+    }]
+
     return (
         <div>
             <HeroSection
@@ -38,26 +54,14 @@ function AboutHeroSection() {
                     title={"Our Pillars"}
                 />
 
-                <div className="flex py-10">
-                    <Card
-                        title={"Descite"}
-                        description={"Develop Skills!! This is the first step in your journey. Learn the basics of programming and get a solid foundation."}
-                    />
-
-                    <Card
-                        title={"Develop"}
-                        description={"Build it!! Time to turn your dreams and ideas into reality by writing the code and creating your tech masterpiece."}
-                    />
-
-                    <Card
-                        title={"Debug"}
-                        description={"Fix it!! When things inevitably go haywire, you identify errors, issues and finally hunt down and fix those bugs."}
-                    />
-
-                    <Card
-                        title={"Deploy"}
-                        description={"Share it!! After your creation is polished and perfected, deploy it to the world, making it accessible to users."}
-                    />
+                <div className="flex md:flex-row flex-col py-10">
+                    {
+                        AboutCards.map((props, k) => {
+                            return (
+                                <Card title={props.title} description={props.description} key={k} />
+                            )
+                        })
+                    }
                 </div>
             </div>
         </div>
@@ -87,13 +91,13 @@ function ReachSection() {
                 <div>
                     <Heading title={"Our Reach"} />
                 </div>
-                <div className="bg-slate-400 w-[1280px] h-[720px] rounded-md shadow-md mx-10"></div>
-                <div className="flex justify-between pt-4">
+                <div className="bg-slate-400 xl:h-[720px] lg:h-[540px] md:h-[340px] h-[240px] w-[100%] rounded-md shadow-md"></div>
+                <div className="flex md:flex-row flex-col md:gap-20 gap-10 justify-center pt-4 flex-wrap">
                     {reachInfo.map((prop, i) => {
                         return (
                             <div key={i}>
-                                <h1 className="text-[#BFBFBF] text-[24px]">{prop.title}</h1>
-                                <p className="font-bold text-[38px]">{prop.reach}+</p>
+                                <h1 className="text-[#BFBFBF] md:text-[24px] text-[16px]">{prop.title}</h1>
+                                <p className="font-semibold md:text-[34px] text-[24px]">{prop.reach}+</p>
                             </div>
                         )
                     })}
@@ -104,10 +108,42 @@ function ReachSection() {
 }
 
 
-function FounderSection () {
+function FounderSection() {
+    const FounderInfo: FounderType[] = [{
+        name: "Ayush Kumar Tiwari - Co-Founder D4",
+        title: "Tomorrow should be better than today.",
+        description: "We are a team of strategists, designers communicators, researchers. Togeather, we belive that progress only happens when you refuse to play things safe.",
+        link: "https://www.linkedin.com/in/itsayu",
+        image: "/founderImg/AyushKumarTiwari.png",
+        reverse: true // reverse is for css card reversing (optional)
+    }, {
+        name: "Sagar Malhotra - Co-Founder D4",
+        title: "See how we can help you progress",
+        description: "We add a layer of fearless insights and action that allows change makers to accelerate their progress in areas such as brand, designdigital, comms and social research.",
+        link: "https://www.linkedin.com/in/sagar0-0malhotra",
+        image: "/founderImg/Sagar.png",
+        reverse: false
+    }]
     return (
         <div className="py-20">
             <Heading title={"From D4 Founders"} />
+            <div className="lg:py-44 py-32 flex flex-col lg:gap-48 gap-32">
+                {
+                    FounderInfo.map((props, k) => {
+                        return (
+                            <FounderCard 
+                                key={k}
+                                name={props.name}
+                                title={props.title}
+                                description={props.description}
+                                link={props.link}
+                                src={props.image}
+                                reverse={props.reverse}
+                            />
+                        )
+                    })
+                }
+            </div>
         </div>
     )
 }

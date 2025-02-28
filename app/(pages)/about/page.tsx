@@ -8,6 +8,7 @@ import Card from "@/app/components/Card";
 import { CardType } from "@/types/cards";
 import FounderCard from "@/app/components/FounderCard";
 import { FounderType } from "@/types/founder";
+import Image from "next/image";
 
 export default function AboutPAge() {
     return (
@@ -91,7 +92,14 @@ function ReachSection() {
                 <div>
                     <Heading title={"Our Reach"} />
                 </div>
-                <div className="bg-slate-400 xl:h-[720px] lg:h-[540px] md:h-[340px] h-[240px] w-[100%] rounded-md shadow-md"></div>
+                <div className="relative bg-slate-400 xl:h-[720px] lg:h-[540px] md:h-[340px] h-[240px] w-[100%] rounded-sm shadow-md overflow-hidden">
+                    <Image 
+                        src="/extra/map.png"
+                        fill
+                        objectFit="cover"
+                        alt="reach"
+                    />
+                </div>
                 <div className="flex md:flex-row flex-col md:gap-20 gap-10 justify-center pt-4 flex-wrap">
                     {reachInfo.map((prop, i) => {
                         return (

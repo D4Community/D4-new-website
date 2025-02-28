@@ -4,7 +4,7 @@ import HeroSection from "@/app/components/HeroSection";
 
 import eventImg from "@/app/assets/images/eventsHeroImg.png"
 import { Heading } from "@/app/components/Headings";
-import RecentEventCard from "@/app/components/EventCard";
+import { RecentEventCard, UpcomingEventCard } from "@/app/components/EventCard";
 import { RecentEventCardType } from "@/types/cards";
 import Image from "next/image";
 
@@ -83,7 +83,7 @@ function EventSection() {
                         fill
                         objectFit="cover"
                         alt="Eventname"
-                     />
+                    />
                     <div className="relative z-20 bg-[linear-gradient(to_left,#A46FF2,#E49976)]">
                         <p className="text-center p-4">Upcoming Event</p>
                     </div>
@@ -94,10 +94,13 @@ function EventSection() {
 }
 
 
-function UpcomingEventSection () {
+function UpcomingEventSection() {
     return (
         <div className="py-28">
             <Heading title={"Upcoming Events"} />
+            <div className="py-12 flex">
+                <UpcomingEventCard />
+            </div>
         </div>
     )
 }

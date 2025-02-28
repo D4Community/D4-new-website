@@ -49,32 +49,38 @@ function CoreTeamSection() {
         name: "Ayush Anshu",
         bio: "friednly neighbourhood web developer",
         designation: "Web Team Lead",
-        image: "/coreTeam/default.png",
-        link: ""
+        image: "/coreTeam/ayush24k.png",
+        link: "https://www.linkedin.com/in/ayushanshu"
     }, {
-        name: "KaliaNag",
-        bio: "kalu",
-        designation: "Nig ra",
-        image: "/coreTeam/default.png",
-        link: ""
+        name: "Devansh Srivastava",
+        bio: "Devansh is a passionate and self-motivated individual currently in the final year of graduation, with a strong foundation in Python and experience working with NoSQL databases. Proficient in Python frameworks like Django, with hands-on knowledge of PHP and other backend technologies. Currently serving as the Management Lead at D4 Community, showcasing strong managerial skills and driving initiatives focused on community growth and collaboration. A keen learner with a curiosity to explore and adapt to new technologies, driven to solve problems and build efficient solutions.",
+        designation: "Management Lead",
+        image: "/coreTeam/DevanshSrivastava.svg",
+        link: "https://www.linkedin.com/in/devansh-srivastava-95a343204/"
     }, {
-        name: "KaliaNag",
-        bio: "kalu",
-        designation: "Nig ra",
-        image: "/coreTeam/default.png",
-        link: ""
+        name: "Bhumika Varshney",
+        bio: "A passionate and motivated second-year B.Tech Computer Science student with fundamental skills inprogramming and a keen interest in software engineering, seeking an internship opportunity in Google's STEP program to further develop technical skills and gain hands-on experience in software development",
+        designation: "Social Media Team Lead",
+        image: "/coreTeam/BhumikaVarshney.svg",
+        link: "https://www.linkedin.com/in/bhumika-varshney-90ba64295/"
     }, {
-        name: "KaliaNag",
-        bio: "kalu",
-        designation: "Nig ra",
-        image: "/coreTeam/default.png",
-        link: ""
+        name: "Devishi Aggarwal",
+        bio: "Campus lead of D4 community , CU",
+        designation: "Campus Lead CU",
+        image: "/coreTeam/DevishiAggarwal.png",
+        link: "https://www.linkedin.com/in/devishiaggarwal/"
     }, {
-        name: "KaliaNag",
-        bio: "kalu",
-        designation: "Nig ra",
-        image: "/coreTeam/default.png",
-        link: ""
+        name: "Dhairya Ahuja",
+        bio: "developer",
+        designation: "Scoial Media Team Lead",
+        image: "/coreTeam/DhairyaAhuja.png",
+        link: "https://www.linkedin.com/in/dhairya-ahuja-1b3b74286/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+    }, {
+        name: "Qazi Zaid",
+        bio: "Graphic Designing Lead @D4 Community | Student Ambassador @ The Esports Club (TEC) | Campus Ambassador @HackwithIndia | UI/UX Designer | Web Developer | Tech Enthusiast | CSE'27",
+        designation: "Graphic Team Lead",
+        image: "/coreTeam/QaziZaid.png",
+        link: "https://www.linkedin.com/in/qazi-zaid/"
     }]
 
     const [selectedTeamMember, setSelectedTeamMeber] = useState<TeamType | null>(null);
@@ -148,7 +154,7 @@ function CoreTeamSection() {
                             </button>
 
                             <div className="flex items-center gap-6">
-                                <div className="relative md:min-h-24 md:min-w-24 min-h-[100px] min-w-[100px] rounded-full overflow-hidden bg-slate-400 border-[#EC5735] border-[1px]">
+                                <div className="relative md:min-h-24 md:min-w-24 min-h-[100px] min-w-[100px] rounded-full overflow-hidden bg-white border-[#EC5735] border-[1px]">
                                     <Image
                                         src={selectedTeamMember.image}
                                         alt={selectedTeamMember.name}

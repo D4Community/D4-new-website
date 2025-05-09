@@ -13,7 +13,7 @@ import Link from "next/link"
 
 export default function Footer() {
     return (
-        <footer className="bottom-0 z-10 relative border-t-[1px] bg-[#0E0C15]/80 border-[#EC5735] backdrop-blur-md">
+        <footer className="bottom-0 z-[5] relative border-t-[1px] bg-[#0E0C15]/80 border-[#EC5735] backdrop-blur-md">
             <div className="container py-8 px-4">
                 {/*
                 todo:

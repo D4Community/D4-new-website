@@ -1,8 +1,20 @@
 import type { Metadata } from "next";
-import { Josefin_Sans } from "next/font/google";
 import "./globals.css";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import localFont from "next/font/local";
 
-const josfin = Josefin_Sans({ subsets: ["latin"] });
+const productSans = localFont({
+  src: [
+    { path: "./assets/fonts/product-sans/Product Sans Regular.ttf", weight: "400", style: "normal" },
+    { path: "./assets/fonts/product-sans/Product Sans Italic.ttf", weight: "400", style: "italic" },
+    { path: "./assets/fonts/product-sans/Product Sans Bold.ttf", weight: "700", style: "normal" },
+    { path: "./assets/fonts/product-sans/Product Sans Bold Italic.ttf", weight: "700", style: "italic" },
+  ],
+  variable: "--font-product-sans",
+  display: "swap",
+});
+
 
 export const metadata: Metadata = {
   title: "D4 Community",
@@ -16,7 +28,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${josfin.className} antialiased`}>{children}</body>
+      <body className={`${productSans.className} antialiased bg-[#0E0C15]`}>
+        <Navbar />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }
